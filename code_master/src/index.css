@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ===== CSS Custom Properties (Design Tokens) ===== */
+:root {
+  --lc-bg-primary: #1a1a2e;
+  --lc-bg-secondary: #16213e;
+  --lc-bg-tertiary: #0f3460;
+  --lc-bg-card: #1e293b;
+  --lc-bg-card-hover: #263548;
+  --lc-bg-input: #1e293b;
+  --lc-bg-navbar: rgba(26, 26, 46, 0.92);
+
+  --lc-text-primary: #e2e8f0;
+  --lc-text-secondary: #94a3b8;
+  --lc-text-muted: #64748b;
+  --lc-text-accent: #ffa116;
+
+  --lc-accent-primary: #ffa116;
+  --lc-accent-secondary: #e09112;
+  --lc-accent-glow: rgba(255, 161, 22, 0.25);
+
+  --lc-border: #2d3748;
+  --lc-border-focus: #ffa116;
+
+  --lc-easy: #00b8a3;
+  --lc-medium: #ffc01e;
+  --lc-hard: #ff375f;
+
+  --lc-success: #2cbb5d;
+  --lc-premium: #ffa116;
+
+  --lc-gradient-hero: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  --lc-gradient-card: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 52, 96, 0.4));
+  --lc-gradient-accent: linear-gradient(135deg, #ffa116 0%, #ff6b35 100%);
+  --lc-gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+
+  --lc-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --lc-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --lc-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --lc-shadow-glow: 0 0 20px rgba(255, 161, 22, 0.15);
+
+  --lc-radius-sm: 6px;
+  --lc-radius-md: 10px;
+  --lc-radius-lg: 16px;
+  --lc-radius-xl: 24px;
+}
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--lc-bg-primary);
+  color: var(--lc-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--lc-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--lc-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lc-text-muted);
+}
+
+/* ===== Keyframe Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(1deg); }
+  66% { transform: translateY(4px) rotate(-1deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 161, 22, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(255, 161, 22, 0.4); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--lc-accent-primary); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.6; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+/* ===== Animation Utility Classes ===== */
+.animate-fadeIn { animation: fadeIn 0.2s ease-out; }
+.animate-fadeInUp { animation: fadeInUp 0.6s ease-out both; }
+.animate-fadeInDown { animation: fadeInDown 0.5s ease-out both; }
+.animate-fadeInLeft { animation: fadeInLeft 0.6s ease-out both; }
+.animate-fadeInRight { animation: fadeInRight 0.6s ease-out both; }
+.animate-slideUp { animation: slideUp 0.8s ease-out both; }
+.animate-scaleIn { animation: scaleIn 0.5s ease-out both; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Staggered delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* ===== Glassmorphism Utilities ===== */
+.glass {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Custom Button Styles ===== */
+.btn-accent {
+  background: var(--lc-gradient-accent);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: var(--lc-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 161, 22, 0.35);
+}
+
+.btn-accent:active {
+  transform: translateY(0);
+}
+
+.btn-accent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255,255,255,0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-accent:hover::after {
+  opacity: 1;
+}
+
+/* ===== Ripple Effect ===== */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-container .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+/* ===== Card Hover Effects ===== */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--lc-shadow-lg);
+  border-color: rgba(255, 161, 22, 0.3);
+}
+
+/* ===== Input Focus Effects ===== */
+.input-glow:focus {
+  outline: none;
+  border-color: var(--lc-accent-primary);
+  box-shadow: 0 0 0 3px rgba(255, 161, 22, 0.15);
+}
+
+/* ===== Difficulty Badge Colors ===== */
+.badge-easy {
+  color: var(--lc-easy);
+  background: rgba(0, 184, 163, 0.12);
+}
+.badge-medium {
+  color: var(--lc-medium);
+  background: rgba(255, 192, 30, 0.12);
+}
+.badge-hard {
+  color: var(--lc-hard);
+  background: rgba(255, 55, 95, 0.12);
+}
+
+/* ===== Floating Particles (Background Decoration) ===== */
+.particles-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 161, 22, 0.15);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+
+/* ===== Social Login Button ===== */
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--lc-border);
+  background: transparent;
+  color: var(--lc-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  border-color: var(--lc-accent-primary);
+  color: var(--lc-accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 161, 22, 0.2);
+}
+
+/* ===== Tag Pill ===== */
+.tag-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(255, 161, 22, 0.1);
+  color: var(--lc-accent-primary);
+  border: 1px solid rgba(255, 161, 22, 0.2);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.tag-pill:hover {
+  background: rgba(255, 161, 22, 0.2);
+}
+
+.tag-pill.active {
+  background: var(--lc-accent-primary);
+  color: #1a1a2e;
+  border-color: var(--lc-accent-primary);
+}
+
+/* ===== Calendar Cell ===== */
+.cal-cell {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--lc-text-secondary);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.cal-cell:hover {
+  background: rgba(255, 161, 22, 0.1);
+  color: var(--lc-text-primary);
+}
+
+.cal-cell.solved {
+  background: rgba(0, 184, 163, 0.2);
+  color: var(--lc-easy);
+}
+
+.cal-cell.today {
+  border: 1px solid var(--lc-accent-primary);
+  color: var(--lc-accent-primary);
+  font-weight: 600;
+}
+
+/* ===== Password Toggle ===== */
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--lc-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.password-toggle:hover {
+  color: var(--lc-text-secondary);
+}
+
+/* ===== Streak Badge ===== */
+.streak-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.streak-badge::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,161,22,0.15), transparent 70%);
+  z-index: -1;
+}
