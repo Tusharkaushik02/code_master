@@ -60,7 +60,7 @@ function Login() {
     <div
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%)',
+        background: 'linear-gradient(135deg, #19120a 0%, #261e15 40%, #31281f 100%)',
         paddingTop: '80px',
       }}
     >
@@ -143,13 +143,13 @@ function Login() {
           </div>
           <h1
             className="text-2xl font-bold animate-fadeInUp delay-100"
-            style={{ color: '#e2e8f0', letterSpacing: '-0.02em' }}
+            style={{ color: '#f0e0d1', letterSpacing: '-0.02em' }}
           >
-            Leet<span style={{ color: '#ffa116' }}>Code</span>
+            CODE<span style={{ color: '#ffa116' }}>FLOW</span>
           </h1>
           <p
             className="text-sm mt-2 animate-fadeInUp delay-200"
-            style={{ color: '#64748b' }}
+            style={{ color: '#a18d7a' }}
           >
             Sign in to your account
           </p>
@@ -161,14 +161,14 @@ function Login() {
           <div className="animate-fadeInUp delay-300">
             <label
               className="block text-sm font-medium mb-2"
-              style={{ color: focusedField === 'email' ? '#ffa116' : '#94a3b8' }}
+              style={{ color: focusedField === 'email' ? '#ffa116' : '#d9c3ad' }}
             >
               Username or E-mail
             </label>
             <div className="relative">
               <div
                 className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200"
-                style={{ color: focusedField === 'email' ? '#ffa116' : '#64748b' }}
+                style={{ color: focusedField === 'email' ? '#ffa116' : '#a18d7a' }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
@@ -189,14 +189,14 @@ function Login() {
                 className="w-full pl-11 pr-4 py-3 rounded-xl text-sm input-glow transition-all duration-300"
                 style={{
                   background: 'rgba(255,255,255,0.04)',
-                  border: `1px solid ${errors.email ? '#ff375f' : focusedField === 'email' ? '#ffa116' : 'rgba(255,255,255,0.1)'}`,
-                  color: '#e2e8f0',
+                  border: `1px solid ${errors.email ? '#ffb4ab' : focusedField === 'email' ? '#ffa116' : 'rgba(255,255,255,0.1)'}`,
+                  color: '#f0e0d1',
                   outline: 'none',
                 }}
               />
             </div>
             {errors.email && (
-              <p className="mt-1.5 text-xs flex items-center gap-1" style={{ color: '#ff375f' }}>
+              <p className="mt-1.5 text-xs flex items-center gap-1" style={{ color: '#ffb4ab' }}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
@@ -209,14 +209,14 @@ function Login() {
           <div className="animate-fadeInUp delay-400">
             <label
               className="block text-sm font-medium mb-2"
-              style={{ color: focusedField === 'password' ? '#ffa116' : '#94a3b8' }}
+              style={{ color: focusedField === 'password' ? '#ffa116' : '#d9c3ad' }}
             >
               Password
             </label>
             <div className="relative">
               <div
                 className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200"
-                style={{ color: focusedField === 'password' ? '#ffa116' : '#64748b' }}
+                style={{ color: focusedField === 'password' ? '#ffa116' : '#a18d7a' }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
@@ -236,8 +236,8 @@ function Login() {
                 className="w-full pl-11 pr-12 py-3 rounded-xl text-sm input-glow transition-all duration-300"
                 style={{
                   background: 'rgba(255,255,255,0.04)',
-                  border: `1px solid ${errors.password ? '#ff375f' : focusedField === 'password' ? '#ffa116' : 'rgba(255,255,255,0.1)'}`,
-                  color: '#e2e8f0',
+                  border: `1px solid ${errors.password ? '#ffb4ab' : focusedField === 'password' ? '#ffa116' : 'rgba(255,255,255,0.1)'}`,
+                  color: '#f0e0d1',
                   outline: 'none',
                 }}
               />
@@ -260,7 +260,7 @@ function Login() {
               </button>
             </div>
             {errors.password && (
-              <p className="mt-1.5 text-xs flex items-center gap-1" style={{ color: '#ff375f' }}>
+              <p className="mt-1.5 text-xs flex items-center gap-1" style={{ color: '#ffb4ab' }}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
@@ -281,12 +281,12 @@ function Login() {
                 onClick={() => setRememberMe(!rememberMe)}
               >
                 {rememberMe && (
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" strokeWidth="3.5" className="absolute top-0.5 left-0.5">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#19120a" strokeWidth="3.5" className="absolute top-0.5 left-0.5">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 )}
               </div>
-              <span className="text-xs" style={{ color: '#94a3b8' }}>Remember me</span>
+              <span className="text-xs" style={{ color: '#d9c3ad' }}>Remember me</span>
             </label>
             <Link
               to="#"
@@ -342,7 +342,7 @@ function Login() {
         {/* Terms */}
         <p
           className="text-center text-xs mt-5 animate-fadeInUp delay-600"
-          style={{ color: '#64748b' }}
+          style={{ color: '#a18d7a' }}
         >
           By continuing, you agree to{' '}
           <a href="#" style={{ color: '#ffa116', textDecoration: 'none' }}>Terms</a>
@@ -353,7 +353,7 @@ function Login() {
         {/* Divider */}
         <div className="flex items-center gap-4 my-6 animate-fadeInUp delay-600">
           <div className="flex-1" style={{ height: '1px', background: 'rgba(255,255,255,0.08)' }} />
-          <span className="text-xs" style={{ color: '#64748b' }}>or you can sign in with</span>
+          <span className="text-xs" style={{ color: '#a18d7a' }}>or you can sign in with</span>
           <div className="flex-1" style={{ height: '1px', background: 'rgba(255,255,255,0.08)' }} />
         </div>
 
@@ -394,7 +394,7 @@ function Login() {
         {/* Sign Up Link */}
         <p
           className="text-center text-sm mt-6 animate-fadeInUp delay-800"
-          style={{ color: '#94a3b8' }}
+          style={{ color: '#d9c3ad' }}
         >
           Don't have an account?{' '}
           <Link
@@ -413,9 +413,9 @@ function Login() {
       {/* Copyright Footer */}
       <div
         className="absolute bottom-6 left-0 right-0 text-center text-xs"
-        style={{ color: '#475569' }}
+        style={{ color: '#a18d7a' }}
       >
-        Copyright © 2026 LeetCode
+        Copyright © 2026 CODEFLOW
       </div>
     </div>
   );

@@ -41,10 +41,10 @@ function Register() {
     if (/[0-9]/.test(pass)) score++;
     if (/[^A-Za-z0-9]/.test(pass)) score++;
 
-    if (score <= 1) return { level: 1, label: 'Weak', color: '#ff375f' };
+    if (score <= 1) return { level: 1, label: 'Weak', color: '#ffb4ab' };
     if (score <= 2) return { level: 2, label: 'Fair', color: '#ffc01e' };
     if (score <= 3) return { level: 3, label: 'Good', color: '#ffa116' };
-    return { level: 4, label: 'Strong', color: '#00b8a3' };
+    return { level: 4, label: 'Strong', color: '#00b7a2' };
   };
 
   const strength = getPasswordStrength();
@@ -76,8 +76,8 @@ function Register() {
 
   const inputStyle = (field, hasError) => ({
     background: 'rgba(255,255,255,0.04)',
-    border: `1px solid ${hasError ? '#ff375f' : focusedField === field ? '#ffa116' : 'rgba(255,255,255,0.1)'}`,
-    color: '#e2e8f0',
+    border: `1px solid ${hasError ? '#ffb4ab' : focusedField === field ? '#ffa116' : 'rgba(255,255,255,0.1)'}`,
+    color: '#f0e0d1',
     outline: 'none',
   });
 
@@ -85,7 +85,7 @@ function Register() {
     <div
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%)',
+        background: 'linear-gradient(135deg, #19120a 0%, #261e15 40%, #31281f 100%)',
         paddingTop: '80px',
         paddingBottom: '60px',
       }}
@@ -120,7 +120,7 @@ function Register() {
             className="flex items-center justify-center mb-4 animate-scaleIn"
             style={{
               width: '56px', height: '56px', borderRadius: '16px',
-              background: 'linear-gradient(135deg, #00b8a3 0%, #00897b 100%)',
+              background: 'linear-gradient(135deg, #00b7a2 0%, #00897b 100%)',
               boxShadow: '0 4px 20px rgba(0, 184, 163, 0.3)',
             }}
           >
@@ -130,10 +130,10 @@ function Register() {
               <line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/>
             </svg>
           </div>
-          <h1 className="text-2xl font-bold animate-fadeInUp delay-100" style={{ color: '#e2e8f0' }}>
+          <h1 className="text-2xl font-bold animate-fadeInUp delay-100" style={{ color: '#f0e0d1' }}>
             Create Account
           </h1>
-          <p className="text-sm mt-2 animate-fadeInUp delay-200" style={{ color: '#64748b' }}>
+          <p className="text-sm mt-2 animate-fadeInUp delay-200" style={{ color: '#a18d7a' }}>
             Join millions of coders today
           </p>
         </div>
@@ -142,11 +142,11 @@ function Register() {
         <form onSubmit={submitData} className="space-y-5">
           {/* Username */}
           <div className="animate-fadeInUp delay-200">
-            <label className="block text-sm font-medium mb-2" style={{ color: focusedField === 'userName' ? '#ffa116' : '#94a3b8' }}>
+            <label className="block text-sm font-medium mb-2" style={{ color: focusedField === 'userName' ? '#ffa116' : '#d9c3ad' }}>
               Username
             </label>
             <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200" style={{ color: focusedField === 'userName' ? '#ffa116' : '#64748b' }}>
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200" style={{ color: focusedField === 'userName' ? '#ffa116' : '#a18d7a' }}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
               <input
@@ -162,16 +162,16 @@ function Register() {
                 style={inputStyle('userName', errors.userName)}
               />
             </div>
-            {errors.userName && <p className="mt-1.5 text-xs" style={{ color: '#ff375f' }}>{errors.userName}</p>}
+            {errors.userName && <p className="mt-1.5 text-xs" style={{ color: '#ffb4ab' }}>{errors.userName}</p>}
           </div>
 
           {/* Email */}
           <div className="animate-fadeInUp delay-300">
-            <label className="block text-sm font-medium mb-2" style={{ color: focusedField === 'email' ? '#ffa116' : '#94a3b8' }}>
+            <label className="block text-sm font-medium mb-2" style={{ color: focusedField === 'email' ? '#ffa116' : '#d9c3ad' }}>
               Email
             </label>
             <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200" style={{ color: focusedField === 'email' ? '#ffa116' : '#64748b' }}>
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200" style={{ color: focusedField === 'email' ? '#ffa116' : '#a18d7a' }}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <input
@@ -186,16 +186,16 @@ function Register() {
                 style={inputStyle('email', errors.email)}
               />
             </div>
-            {errors.email && <p className="mt-1.5 text-xs" style={{ color: '#ff375f' }}>{errors.email}</p>}
+            {errors.email && <p className="mt-1.5 text-xs" style={{ color: '#ffb4ab' }}>{errors.email}</p>}
           </div>
 
           {/* Password */}
           <div className="animate-fadeInUp delay-400">
-            <label className="block text-sm font-medium mb-2" style={{ color: focusedField === 'password' ? '#ffa116' : '#94a3b8' }}>
+            <label className="block text-sm font-medium mb-2" style={{ color: focusedField === 'password' ? '#ffa116' : '#d9c3ad' }}>
               Password
             </label>
             <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200" style={{ color: focusedField === 'password' ? '#ffa116' : '#64748b' }}>
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors duration-200" style={{ color: focusedField === 'password' ? '#ffa116' : '#a18d7a' }}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               </div>
               <input
@@ -217,7 +217,7 @@ function Register() {
                 )}
               </button>
             </div>
-            {errors.password && <p className="mt-1.5 text-xs" style={{ color: '#ff375f' }}>{errors.password}</p>}
+            {errors.password && <p className="mt-1.5 text-xs" style={{ color: '#ffb4ab' }}>{errors.password}</p>}
 
             {/* Password Strength Indicator */}
             {pass && (
@@ -249,10 +249,10 @@ function Register() {
               onClick={() => setAgreeTerms(!agreeTerms)}
             >
               {agreeTerms && (
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" strokeWidth="3.5" className="absolute top-0.5 left-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#19120a" strokeWidth="3.5" className="absolute top-0.5 left-0.5"><polyline points="20 6 9 17 4 12"/></svg>
               )}
             </div>
-            <span className="text-xs leading-relaxed" style={{ color: '#94a3b8' }}>
+            <span className="text-xs leading-relaxed" style={{ color: '#d9c3ad' }}>
               I agree to the <a href="#" style={{ color: '#ffa116', textDecoration: 'none' }}>Terms of Service</a> and <a href="#" style={{ color: '#ffa116', textDecoration: 'none' }}>Privacy Policy</a>
             </span>
           </div>
@@ -285,7 +285,7 @@ function Register() {
         {/* Divider */}
         <div className="flex items-center gap-4 my-6 animate-fadeInUp delay-600">
           <div className="flex-1" style={{ height: '1px', background: 'rgba(255,255,255,0.08)' }} />
-          <span className="text-xs" style={{ color: '#64748b' }}>or sign up with</span>
+          <span className="text-xs" style={{ color: '#a18d7a' }}>or sign up with</span>
           <div className="flex-1" style={{ height: '1px', background: 'rgba(255,255,255,0.08)' }} />
         </div>
 
@@ -297,7 +297,7 @@ function Register() {
         </div>
 
         {/* Login Link */}
-        <p className="text-center text-sm mt-6 animate-fadeInUp delay-800" style={{ color: '#94a3b8' }}>
+        <p className="text-center text-sm mt-6 animate-fadeInUp delay-800" style={{ color: '#d9c3ad' }}>
           Already have an account?{' '}
           <Link to="/login" className="font-semibold transition-colors duration-200" style={{ color: '#ffa116', textDecoration: 'none' }}
             onMouseEnter={(e) => { e.currentTarget.style.color = '#ffb84d'; }}

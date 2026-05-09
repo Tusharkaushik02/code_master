@@ -29,9 +29,9 @@ function Hero() {
 
   const stats = [
     { value: '3,200+', label: 'Coding Problems', color: '#ffa116' },
-    { value: '50M+', label: 'Global Users', color: '#00b8a3' },
+    { value: '50M+', label: 'Global Users', color: '#00b7a2' },
     { value: '100+', label: 'Weekly Contests', color: '#ffc01e' },
-    { value: '15+', label: 'Programming Languages', color: '#ff375f' },
+    { value: '15+', label: 'Programming Languages', color: '#ffb4ab' },
   ];
 
   const features = [
@@ -56,7 +56,7 @@ function Hero() {
       ),
       title: 'Weekly Contests',
       desc: 'Compete with millions of developers in timed challenges.',
-      color: '#00b8a3',
+      color: '#00b7a2',
     },
     {
       icon: (
@@ -80,7 +80,7 @@ function Hero() {
       ),
       title: 'Community',
       desc: 'Learn from detailed solutions and discussions by top coders.',
-      color: '#ff375f',
+      color: '#ffb4ab',
     },
   ];
 
@@ -108,13 +108,13 @@ function Hero() {
   ];
 
   return (
-    <div style={{ background: '#1a1a2e', paddingTop: '70px' }}>
+    <div style={{ background: '#19120a', paddingTop: '70px' }}>
 
       {/* ===== HERO SECTION ===== */}
       <section
         className="relative min-h-screen flex items-center overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 35%, #0f3460 70%, #1a1a2e 100%)',
+          background: 'linear-gradient(135deg, #19120a 0%, #261e15 35%, #31281f 70%, #19120a 100%)',
         }}
       >
         {/* Decorative Background Elements */}
@@ -177,7 +177,7 @@ function Hero() {
 
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-fadeInLeft delay-100"
-              style={{ color: '#e2e8f0', letterSpacing: '-0.03em' }}
+              style={{ color: '#f0e0d1', letterSpacing: '-0.03em' }}
             >
               Master{' '}
               <span
@@ -196,9 +196,9 @@ function Hero() {
 
             <p
               className="text-lg md:text-xl leading-relaxed mb-8 max-w-lg animate-fadeInLeft delay-200"
-              style={{ color: '#94a3b8' }}
+              style={{ color: '#d9c3ad' }}
             >
-              LeetCode is the best platform to help you enhance your skills, expand your knowledge, and prepare for technical interviews.
+              CODEFLOW is the best platform to help you enhance your skills, expand your knowledge, and prepare for technical interviews.
             </p>
 
             {/* CTA Buttons */}
@@ -233,7 +233,7 @@ function Hero() {
                     onClick={() => navigate('/problemlist')}
                     className="flex items-center gap-2 text-base font-semibold px-8 py-3.5 rounded-xl cursor-pointer transition-all duration-300"
                     style={{
-                      color: '#e2e8f0',
+                      color: '#f0e0d1',
                       background: 'rgba(255,255,255,0.06)',
                       border: '1px solid rgba(255,255,255,0.12)',
                     }}
@@ -257,7 +257,7 @@ function Hero() {
             {/* Trust indicators */}
             <div className="flex items-center gap-6 animate-fadeInLeft delay-400">
               <div className="flex -space-x-2">
-                {['#ffa116', '#00b8a3', '#ff375f', '#ffc01e', '#6366f1'].map((c, i) => (
+                {['#ffa116', '#00b7a2', '#ffb4ab', '#ffc01e', '#6366f1'].map((c, i) => (
                   <div
                     key={i}
                     style={{
@@ -265,7 +265,7 @@ function Hero() {
                       height: '32px',
                       borderRadius: '50%',
                       background: c,
-                      border: '2px solid #1a1a2e',
+                      border: '2px solid #19120a',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -279,8 +279,8 @@ function Hero() {
                 ))}
               </div>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#e2e8f0' }}>50M+ developers</p>
-                <p className="text-xs" style={{ color: '#64748b' }}>trust LeetCode worldwide</p>
+                <p className="text-sm font-semibold" style={{ color: '#f0e0d1' }}>50M+ developers</p>
+                <p className="text-xs" style={{ color: '#a18d7a' }}>trust CODEFLOW worldwide</p>
               </div>
             </div>
           </div>
@@ -303,10 +303,10 @@ function Hero() {
                 className="flex items-center gap-2 px-4 py-3"
                 style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
               >
-                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff375f' }} />
+                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffb4ab' }} />
                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffc01e' }} />
-                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#00b8a3' }} />
-                <span className="ml-3 text-xs font-medium" style={{ color: '#64748b' }}>twoSum.js — LeetCode</span>
+                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#00b7a2' }} />
+                <span className="ml-3 text-xs font-medium" style={{ color: '#a18d7a' }}>twoSum.js — CODEFLOW</span>
               </div>
 
               {/* Tabs */}
@@ -317,10 +317,10 @@ function Hero() {
                 >
                   Solution
                 </div>
-                <div className="px-4 py-2 text-xs font-medium" style={{ color: '#64748b' }}>
+                <div className="px-4 py-2 text-xs font-medium" style={{ color: '#a18d7a' }}>
                   Description
                 </div>
-                <div className="px-4 py-2 text-xs font-medium" style={{ color: '#64748b' }}>
+                <div className="px-4 py-2 text-xs font-medium" style={{ color: '#a18d7a' }}>
                   Submissions
                 </div>
               </div>
@@ -336,8 +336,8 @@ function Hero() {
                       animation: `fadeInLeft 0.4s ease-out ${0.5 + i * 0.15}s both`,
                     }}
                   >
-                    <span className="text-xs w-5 text-right shrink-0" style={{ color: '#475569' }}>{i + 1}</span>
-                    <span className="text-xs" style={{ color: '#e2e8f0' }}>
+                    <span className="text-xs w-5 text-right shrink-0" style={{ color: '#a18d7a' }}>{i + 1}</span>
+                    <span className="text-xs" style={{ color: '#f0e0d1' }}>
                       {line.text.split(/(\bfunction\b|\bconst\b|\bfor\b|\blet\b|\bif\b|\breturn\b|\bnew\b)/).map((part, j) => (
                         <span
                           key={j}
@@ -346,7 +346,7 @@ function Hero() {
                               ? '#c084fc'
                               : part.includes('Map') || part.includes('twoSum')
                                 ? '#ffc01e'
-                                : '#e2e8f0',
+                                : '#f0e0d1',
                           }}
                         >
                           {part}
@@ -363,10 +363,10 @@ function Hero() {
                 style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(0,184,163,0.05)' }}
               >
                 <div className="flex items-center gap-2">
-                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00b8a3' }} />
-                  <span className="text-xs font-medium" style={{ color: '#00b8a3' }}>Accepted</span>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00b7a2' }} />
+                  <span className="text-xs font-medium" style={{ color: '#00b7a2' }}>Accepted</span>
                 </div>
-                <span className="text-xs" style={{ color: '#64748b' }}>Runtime: 52ms · Memory: 42.1 MB</span>
+                <span className="text-xs" style={{ color: '#a18d7a' }}>Runtime: 52ms · Memory: 42.1 MB</span>
               </div>
             </div>
           </div>
@@ -378,7 +378,7 @@ function Hero() {
             className="flex flex-col items-center gap-2 cursor-pointer"
             onClick={() => document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            <span className="text-xs" style={{ color: '#64748b' }}>Scroll to explore</span>
+            <span className="text-xs" style={{ color: '#a18d7a' }}>Scroll to explore</span>
             <div
               className="w-6 h-10 rounded-full flex justify-center pt-2"
               style={{ border: '1.5px solid rgba(255,255,255,0.15)' }}
@@ -400,7 +400,7 @@ function Hero() {
         ref={statsRef}
         className="relative py-20"
         style={{
-          background: 'linear-gradient(180deg, #16213e 0%, #1a1a2e 100%)',
+          background: 'linear-gradient(180deg, #261e15 0%, #19120a 100%)',
           borderTop: '1px solid rgba(255,255,255,0.04)',
           borderBottom: '1px solid rgba(255,255,255,0.04)',
         }}
@@ -422,19 +422,19 @@ function Hero() {
               >
                 {stat.value}
               </p>
-              <p className="text-sm" style={{ color: '#94a3b8' }}>{stat.label}</p>
+              <p className="text-sm" style={{ color: '#d9c3ad' }}>{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ===== FEATURES SECTION ===== */}
-      <section id="features-section" className="py-24" style={{ background: '#1a1a2e' }}>
+      <section id="features-section" className="py-24" style={{ background: '#19120a' }}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: '#e2e8f0', letterSpacing: '-0.02em' }}
+              style={{ color: '#f0e0d1', letterSpacing: '-0.02em' }}
             >
               Everything you need to{' '}
               <span
@@ -447,7 +447,7 @@ function Hero() {
                 ace the interview
               </span>
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#94a3b8' }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#d9c3ad' }}>
               From curated problem sets to live contests, we've got your coding journey covered.
             </p>
           </div>
@@ -478,11 +478,11 @@ function Hero() {
                 </div>
                 <h3
                   className="text-base font-semibold mb-2"
-                  style={{ color: '#e2e8f0' }}
+                  style={{ color: '#f0e0d1' }}
                 >
                   {feature.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#94a3b8' }}>
+                <p className="text-sm leading-relaxed" style={{ color: '#d9c3ad' }}>
                   {feature.desc}
                 </p>
               </div>
@@ -495,15 +495,15 @@ function Hero() {
       <section
         className="py-24"
         style={{
-          background: 'linear-gradient(180deg, #1a1a2e 0%, #16213e 100%)',
+          background: 'linear-gradient(180deg, #19120a 0%, #261e15 100%)',
         }}
       >
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#e2e8f0' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f0e0d1' }}>
               Popular Topics
             </h2>
-            <p className="text-lg" style={{ color: '#94a3b8' }}>
+            <p className="text-lg" style={{ color: '#d9c3ad' }}>
               Explore problems across the most in-demand categories
             </p>
           </div>
@@ -517,7 +517,7 @@ function Hero() {
                 style={{
                   background: 'rgba(30, 41, 59, 0.6)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  color: '#e2e8f0',
+                  color: '#f0e0d1',
                   fontSize: '14px',
                   fontWeight: '500',
                 }}
@@ -550,7 +550,7 @@ function Hero() {
 
       {/* ===== CTA SECTION ===== */}
       {!user && (
-        <section className="py-24" style={{ background: '#1a1a2e' }}>
+        <section className="py-24" style={{ background: '#19120a' }}>
           <div className="max-w-4xl mx-auto px-6 text-center">
             <div
               className="p-12 md:p-16 rounded-2xl relative overflow-hidden"
@@ -569,13 +569,13 @@ function Hero() {
 
               <h2
                 className="text-3xl md:text-4xl font-bold mb-4 relative z-10"
-                style={{ color: '#e2e8f0' }}
+                style={{ color: '#f0e0d1' }}
               >
                 Start Your Coding Journey Today
               </h2>
               <p
                 className="text-lg mb-8 relative z-10"
-                style={{ color: '#94a3b8' }}
+                style={{ color: '#d9c3ad' }}
               >
                 Join millions of developers who are already improving their skills.
               </p>
@@ -596,13 +596,13 @@ function Hero() {
       <footer
         className="py-8"
         style={{
-          background: '#16213e',
+          background: '#261e15',
           borderTop: '1px solid rgba(255,255,255,0.06)',
         }}
       >
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm" style={{ color: '#64748b' }}>
-            Copyright © 2026 LeetCode
+          <p className="text-sm" style={{ color: '#a18d7a' }}>
+            Copyright © 2026 CODEFLOW
           </p>
           <div className="flex items-center gap-6">
             {['Help Center', 'Jobs', 'Bug Bounty', 'Terms', 'Privacy Policy'].map((link, i) => (
@@ -610,9 +610,9 @@ function Hero() {
                 key={i}
                 href="#"
                 className="text-xs transition-colors duration-200"
-                style={{ color: '#64748b', textDecoration: 'none' }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = '#94a3b8'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = '#64748b'; }}
+                style={{ color: '#a18d7a', textDecoration: 'none' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = '#d9c3ad'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = '#a18d7a'; }}
               >
                 {link}
               </a>

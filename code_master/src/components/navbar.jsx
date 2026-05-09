@@ -109,9 +109,9 @@ function Navbar() {
           </div>
           <span
             className="text-xl font-bold transition-colors duration-300"
-            style={{ color: '#e2e8f0', letterSpacing: '-0.02em' }}
+            style={{ color: '#f0e0d1', letterSpacing: '-0.02em' }}
           >
-            Leet<span style={{ color: '#ffa116' }}>Code</span>
+            CODE<span style={{ color: '#ffa116' }}>FLOW</span>
           </span>
         </Link>
 
@@ -124,19 +124,19 @@ function Navbar() {
               id={`nav-link-${link.label.toLowerCase()}`}
               className="relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               style={{
-                color: isActive(link.path) ? '#ffa116' : '#94a3b8',
+                color: isActive(link.path) ? '#ffa116' : '#d9c3ad',
                 background: isActive(link.path) ? 'rgba(255, 161, 22, 0.1)' : 'transparent',
                 textDecoration: 'none',
               }}
               onMouseEnter={(e) => {
                 if (!isActive(link.path)) {
-                  e.currentTarget.style.color = '#e2e8f0';
+                  e.currentTarget.style.color = '#f0e0d1';
                   e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
                 }
               }}
               onMouseLeave={(e) => {
                 if (!isActive(link.path)) {
-                  e.currentTarget.style.color = '#94a3b8';
+                  e.currentTarget.style.color = '#d9c3ad';
                   e.currentTarget.style.background = 'transparent';
                 }
               }}
@@ -159,13 +159,13 @@ function Navbar() {
           <div className="relative group">
             <button
               className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
-              style={{ color: '#94a3b8', background: 'transparent', border: 'none' }}
+              style={{ color: '#d9c3ad', background: 'transparent', border: 'none' }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#e2e8f0';
+                e.currentTarget.style.color = '#f0e0d1';
                 e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#94a3b8';
+                e.currentTarget.style.color = '#d9c3ad';
                 e.currentTarget.style.background = 'transparent';
               }}
             >
@@ -190,7 +190,7 @@ function Navbar() {
               onClick={() => setSearchOpen(!searchOpen)}
               className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all duration-200 cursor-pointer"
               style={{
-                color: '#94a3b8',
+                color: '#d9c3ad',
                 background: searchOpen ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.08)',
               }}
@@ -203,7 +203,7 @@ function Navbar() {
               <span className="hidden lg:inline">Search</span>
               <kbd
                 className="hidden lg:inline-flex items-center px-1.5 py-0.5 rounded text-xs font-mono"
-                style={{ background: 'rgba(255,255,255,0.08)', color: '#64748b' }}
+                style={{ background: 'rgba(255,255,255,0.08)', color: '#a18d7a' }}
               >
                 ⌘K
               </kbd>
@@ -231,13 +231,13 @@ function Navbar() {
                     style={{
                       background: 'rgba(255,255,255,0.06)',
                       border: '1px solid rgba(255,255,255,0.1)',
-                      color: '#e2e8f0',
+                      color: '#f0e0d1',
                       outline: 'none',
                     }}
                   />
                 </div>
                 <div className="px-3 pb-3">
-                  <p style={{ color: '#64748b', fontSize: '12px' }}>
+                  <p style={{ color: '#a18d7a', fontSize: '12px' }}>
                     Try: "Two Sum", "Array", "Dynamic Programming"
                   </p>
                 </div>
@@ -250,13 +250,13 @@ function Navbar() {
             <button
               id="notification-btn"
               className="relative p-2 rounded-lg transition-all duration-200 cursor-pointer"
-              style={{ color: '#94a3b8', background: 'transparent', border: 'none' }}
+              style={{ color: '#d9c3ad', background: 'transparent', border: 'none' }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#e2e8f0';
+                e.currentTarget.style.color = '#f0e0d1';
                 e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#94a3b8';
+                e.currentTarget.style.color = '#d9c3ad';
                 e.currentTarget.style.background = 'transparent';
               }}
             >
@@ -265,7 +265,7 @@ function Navbar() {
               </svg>
               <span
                 className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full"
-                style={{ background: '#ff375f' }}
+                style={{ background: '#ffb4ab' }}
               />
             </button>
           )}
@@ -378,10 +378,10 @@ function Navbar() {
                         {getInitials(user.name)}
                       </div>
                       <div className="overflow-hidden">
-                        <p className="text-base font-semibold truncate" style={{ color: '#e2e8f0' }}>
+                        <p className="text-base font-semibold truncate" style={{ color: '#f0e0d1' }}>
                           {user.name || 'User'}
                         </p>
-                        <p className="text-xs truncate" style={{ color: '#64748b' }}>
+                        <p className="text-xs truncate" style={{ color: '#a18d7a' }}>
                           {user.email || ''}
                         </p>
                       </div>
@@ -403,17 +403,17 @@ function Navbar() {
                           navigate(item.path);
                         }}
                         className="w-full text-left px-5 py-3 text-sm flex items-center gap-3 transition-colors cursor-pointer"
-                        style={{ color: '#94a3b8', background: 'transparent', border: 'none' }}
+                        style={{ color: '#d9c3ad', background: 'transparent', border: 'none' }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-                          e.currentTarget.style.color = '#e2e8f0';
+                          e.currentTarget.style.color = '#f0e0d1';
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.background = 'transparent';
-                          e.currentTarget.style.color = '#94a3b8';
+                          e.currentTarget.style.color = '#d9c3ad';
                         }}
                       >
-                        <svg className="w-5 h-5" style={{ color: '#64748b' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5" style={{ color: '#a18d7a' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon} />
                           {item.label === 'Settings' && (
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -434,7 +434,7 @@ function Navbar() {
                         navigate('/');
                       }}
                       className="w-full text-left px-5 py-3 text-sm flex items-center gap-3 transition-colors cursor-pointer"
-                      style={{ color: '#ff375f', background: 'transparent', border: 'none' }}
+                      style={{ color: '#ffb4ab', background: 'transparent', border: 'none' }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.background = 'rgba(255, 55, 95, 0.08)';
                       }}
@@ -458,17 +458,17 @@ function Navbar() {
                 onClick={() => navigate('/login')}
                 className="px-4 py-2 rounded-lg text-sm font-medium cursor-pointer transition-all duration-200"
                 style={{
-                  color: '#94a3b8',
+                  color: '#d9c3ad',
                   background: 'transparent',
                   border: '1px solid rgba(255,255,255,0.12)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#e2e8f0';
+                  e.currentTarget.style.color = '#f0e0d1';
                   e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)';
                   e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#94a3b8';
+                  e.currentTarget.style.color = '#d9c3ad';
                   e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)';
                   e.currentTarget.style.background = 'transparent';
                 }}
@@ -490,7 +490,7 @@ function Navbar() {
           <button
             id="mobile-menu-btn"
             className="md:hidden p-2 rounded-lg cursor-pointer"
-            style={{ color: '#94a3b8', background: 'transparent', border: 'none' }}
+            style={{ color: '#d9c3ad', background: 'transparent', border: 'none' }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -522,7 +522,7 @@ function Navbar() {
               to={link.path}
               className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium"
               style={{
-                color: isActive(link.path) ? '#ffa116' : '#94a3b8',
+                color: isActive(link.path) ? '#ffa116' : '#d9c3ad',
                 textDecoration: 'none',
               }}
               onClick={() => setMobileMenuOpen(false)}
